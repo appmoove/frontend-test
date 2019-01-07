@@ -1,143 +1,152 @@
-# Appmoove: Teste prático para front-end developer 
+# Appmoove: Teste prático para desenvolvedor front-end
 
-## Pré requisitos
-
-- HTML5
-- CSS3
-- Java Script
-- Git
-
+## Pré-requisitos
+* HTML5
+* CSS3
+* JavaScript
+* Git
 
 ## Desafio
-
-O desafio é realizar o desenvolvimento front-end de uma SPA (Single Page Aplication) de um site fictício, o site exibe informações do valor acionário de cinco empresas de tecnologia, são elas: Apple, Google, Microsoft, Facebook e IBM. O desenvolvimento deve seguir o esboço de [layout](layout.jpg). Os dados necessários para preencher as tiles e os gráficos devem ser requisitados desta [API](#api).
-
+O desafio é realizar o desenvolvimento de um site fictício que realiza o cadastro do perfil de um usuário e exibe suas informações, como: nome, interesses pessoais e o perfil do Twitter. O desenvolvimento deve seguir as instruções apresentadas abaixo.
 
 ## Instruções
-
 1. Faça o clone deste repositório.
+
 2. Implemente o desafio.
-3. Após término envie seu projeto <nome_candidato>.zip no e-mail contato@appmoove.com.br.
 
-    **Atenção: Remova a pasta `node_modules` antes de zipar o projeto.**
+3. Realize commits locais.
 
+3. Após o término, envie seu projeto <nome_candidato>.zip para o e-mail contato@appmoove.com.br.
 
-### Design 
+### Design
+Use sua imaginação e proficiência para construir um design agradável, moderno, responsivo e usual.
 
-Quanto ao espaçamento, cores, tipografia, ficará a seu critério, use sua imaginação e proficiência para construir um design agradável, moderno, responsivo e usual.
+## Especificações Técnicas
+### Sidebar
+Na sidebar haverá o logo e duas seções, uma para cadastro e outra para perfil.
 
+### Seção do cadastro
+A seção de cadastro deve conter um formulário com as seguintes informações:
 
-### Topo
+**Campos:**
 
-- No topo da página deve estar o título e o menu, ao rolar a página o menu deve ser mantido e apenas o conteúdo do body sofrer rolagem.
-- O menu deve conter as três opções e o submenu como no layout.
+* Nome;
+* Idade;
+* Link do perfil do Twitter.
 
+**Foto do perfil**
 
-### Slide
+O usuário poderá selecionar uma foto para o seu perfil dentre as opções a seguir:
 
-- O slideshow deve funcionar com as cinco imagens contidas [aqui](slide/)
+![](assets/img-para-perfil.png)
 
+**Preferências**
 
-### Tiles
+* Cachorro - Gato
+* Carro - Moto
+* Pizza - Bolo
 
-- As tiles devem conter o valor atual de uma ação das cinco empresas de tecnologia.
+Esta seleção deve ser feita com uma barra com intervalo.
 
+Exemplo:
 
-### Gráfico
-
-- O gráfico deve conter botões na lateral esquerda com o nome das empresas, estes botões alteram os dados do gráfico.
-- O gráfico de linhas indicam a oscilação do valor acionário no mercado.
-- Na parte superior há um filtro que possibilita escolher por [Today, Last 5 days, This Month], os dados do gráfico devem se adequar de acordo com o filtro.
-- Você pode utilizar a biblioteca que quiser para construção dos gráficos (recomendamos a [ECharts](https://ecomfe.github.io/echarts-doc/public/en/index.html)).
-
-
-### Rodapé 
-
-- O rodapé possui um formulário simples, não é necessário que nenhuma ação ocorra.
-
-
-## Especificações técnicas
-
-1. A aplicação deve ser construída de forma **responsiva**, utilizando os **breakpoints** abaixo:
-
-    Nome do breakpoint | Largura mínima | Largura mínima
-    --- | --- | ---
-    phone	| 320px	| Breakpoint para smartphones
-    tablet | 768px	 | Breakpoint para tablets
-    desktop	 | 1024px	|Breakpoints para desktops
-    monitor	| 1280px	 | Breakpoints para desktops grandes
-
-2. Suporte para IE10+, Chrome, Safari, Firefox
-3. Utilizar os componentes do Bootstrap para montagem das telas.
-4. Não utilizar templates/frameworks (React, Angular ou Vue). Nosso objetivo é testar suas habilidades com HTML/CSS/JS.
+![](assets/exemplo-selecao.png)
 
 
-## Avaliação
+### Seção do perfil
+Esta seção deve conter as informações referentes ao usuário, como:
+* Nome;
+* Idade;
+* Embedded do link do Twitter;
+* Imagem de perfil;
+* Gráfico gerado a partir das preferências referentes às opções informadas no cadastro.
 
-### O que nós esperamos no seu teste 
+Exemplo de perfil 1:
 
-- HTML5 escrito da maneira mais semântica possível.
-- Layout responsivo.
-- Utilização adequada do bootstrap.
+![](assets/exemplo-perfil.png)
 
+Exemplo de perfil 2:
 
-### O que nós ficaríamos felizes de ver em seu teste
+![](assets/exemplo2-perfil.png)
 
-- Utilização de conceitos de UI design e UX design.
-- Alguma metodologia para definição e organização do seu código.
+Essas imagens são meramente ilustrativas, use sua criatividade para desenvolver um layout agradável.
 
+## Critérios de Avaliação
 
-### O que nos impressionaria
+### O que esperamos do seu teste
+* Código escrito da maneira mais semântica possível.
+* Layout responsivo.
+* Utilização adequada do Bootstrap.
 
-- Testes unitários.
-- Aplicação de animações em css quando possível.
+### O que ficaríamos felizes em ver em seu teste
+* Utilização de conceitos de UX/UI design.
 
-
-### O que nós não gostaríamos
-
-- Descobrir que não foi você quem fez seu teste.
-- Ver commits gigantes, sem mensagens ou com `-m` sem pé nem cabeça.
-
-
-## O que avaliaremos de seu teste
-
-- Componentização dos componentes Javascript.
-- Históricos de commits do git.
-- Organização, semântica, estrutura, legibilidade, manutenibilidade, escalabilidade do seu código e suas tomadas de decisões.
-- Alcance dos objetivos propostos.
-
+### O que não gostaríamos
+* Descobrir que não foi você quem fez seu teste;
+* Ver commits grandes, sem ou com descrição sem sentido.
 
 ## API
+A API permite cadastrar, atualizar e buscar as informações referentes ao perfil do usuário.
 
-Esta api fornece dados de valores do mercado de ações.
-Para o desafio será consultado os valores de cinco empresas de tecnologias: Apple (AAPL), Google(GOGL), Microsoft(MSFT), Facebook(FB), IMB(IBM).
+### Métodos
 
-Documentação da API: https://www.alphavantage.co/documentation
-
-- Query
-    - function
-        - GLOBAL_QUOTE = Dados brutos
-        - TIME_SERIES_INTRADAY = Dados do dia
-        - TIME_SERIES_DAILY - Dados diários
-    - symbol
-        - AAPL = Para Apple
-        - GOGL = Para google
-        - MSFT = Para Microsoft
-        - FB = Para Facebook
-        - IBM = Para IBM
-
-Para consultar o valor de uma ação de cada empresa: 
-- Obter o valor **price** do JSON e exibir na tile.
+* **Criar um usuário**
 ```
-GET https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=AAPL&apikey=UL8W9UXLVG1QZRXW
+POST http://test-frontend-2019.pareazul.com.br/api/profile?key=SUA_KEY
+
+{
+    "name": "Teste",
+    "age": 20,
+    "twitter_url": "http://twitter.com.br/perfil",
+    "dog_percent": 30,
+    "cat_percent": 70,
+    "car_percent": 30,
+    "motorcycle_percent": 70,
+    "pizza_percent": 80,
+    "cake_percent": 20,
+    "photo_name": "avatar3.png"
+}
 ```
 
-Para consultar o histórico de valores de ações de uma empresa específica no dia de hoje:
+* **Alterar um usuário**
 ```
-GET https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AAPL&interval=5min&apikey=UL8W9UXLVG1QZRXW
+PUT http://test-frontend-2019.pareazul.com.br/api/profile?key=SUA_KEY
+
+{
+    "name": "Teste",
+    "age": 20,
+    "twitter_url": "http://twitter.com.br/perfil",
+    "dog_percent": 30,
+    "cat_percent": 70,
+    "car_percent": 30,
+    "motorcycle_percent": 70,
+    "pizza_percent": 80,
+    "cake_percent": 20,
+    "photo_name": "avatar3.png"
+}
 ```
 
-Para consultar o histórico de valores de ações de uma empresa específica nos últimos 5 dias:
+* **Obter um usuário**
 ```
-GET https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=AAPL&interval=5min&apikey=UL8W9UXLVG1QZRXW
+GET http://test-frontend-2019.pareazul.com.br/api/profile?key=SUA_KEY
+
+{
+    "name": "Teste",
+    "age": 20,
+    "twitter_url": "http://twitter.com.br/perfil",
+    "dog_percent": 30,
+    "cat_percent": 70,
+    "car_percent": 30,
+    "motorcycle_percent": 70,
+    "pizza_percent": 80,
+    "cake_percent": 20,
+    "photo_name": "avatar3.png"
+}
 ```
+
+### Observações
+* Os arquivos necessários para o teste estão disponíveis na pasta de assets.
+* É permitido o uso de bibliotecas e APIs.
+* O design do layout é livre.
+* Qualquer dúvida envie um e-mail para contato@appmoove.com.br
+* Boa sorte!!!
